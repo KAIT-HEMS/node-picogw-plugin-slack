@@ -6,7 +6,12 @@ let log = console.log ;
 
 let slackBot ;
 
-exports.init = function(pi){
+module.exports = {
+    init: init,
+    onCall: onProcCall,
+};
+
+function init(pi){
 	pluginInterface = pi ;
 	log = pluginInterface.log ;
 
@@ -48,8 +53,6 @@ exports.init = function(pi){
 	} ) ;
 
 	initSlack() ;
-
-	return onProcCall ;
 } ;
 
 function onProcCall( method , path , args ){
