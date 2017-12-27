@@ -4,7 +4,8 @@
   "description": "Slack plugin of picogw",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,9 @@
   },
   "dependencies": {
     "botkit": "^0.6.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.14.0",
+    "eslint-config-google": "^0.9.1"
   }
 }
