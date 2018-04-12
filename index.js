@@ -47,8 +47,8 @@ function onProcCall(method, path, args) {
     case 'GET':
         if (path == '') {
             let re = {post: {text: '[TEXT TO SAY]'}};
-            if (args && args.option === 'true') {
-                re.post.option = {doc: {short: 'Bot to say something'}};
+            if (args && args.info === 'true') {
+                re.post._info = {doc: {short: 'Bot to say something'}};
             }
             return re;
         }
